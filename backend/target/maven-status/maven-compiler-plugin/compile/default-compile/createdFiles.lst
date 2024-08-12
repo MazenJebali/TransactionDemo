@@ -1,0 +1,5 @@
+com\transaction\test\entities\PaymentSettings.class
+com\transaction\test\MainController.class
+com\transaction\test\CORSConfig.class
+com\transaction\test\entities\PaymentData.class
+com\transaction\test\TransactionTestApplication.class
