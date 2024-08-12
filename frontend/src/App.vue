@@ -1,7 +1,6 @@
 <script setup></script>
 
 <template>
-  <router-view>
     <div id="welcomeText">
       <h1>payment DEMO</h1>
       <h2>for e-commerce websites</h2>
@@ -195,7 +194,6 @@
         </button>
       </div>
     </div>
-  </router-view>
 </template>
 
 <script>
