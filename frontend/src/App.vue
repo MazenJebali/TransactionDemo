@@ -284,7 +284,7 @@ export default {
         : true;
       const requestData = { cardsPayment: cardPayment, amount: amount };
       axios
-        .post("http://localhost:9090/generatePayment", requestData)
+        .post("https://transactiondemo.onrender.com/generatePayment", requestData)
         .then((res) => {
           window.location.href = res.data.result.link;
         })
@@ -301,7 +301,7 @@ export default {
         position: toast.POSITION.TOP_LEFT,
       });
       axios
-        .get("http://localhost:9090/verifyPayment/" + productID)
+        .get("https://transactiondemo.onrender.com/verifyPayment/" + productID)
         .then((res) => {
           toast.success("Payment successful", {
             autoClose: 3000,
