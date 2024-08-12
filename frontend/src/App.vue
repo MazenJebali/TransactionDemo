@@ -303,10 +303,18 @@ export default {
       axios
         .get("https://transactiondemo.onrender.com/verifyPayment/" + productID)
         .then((res) => {
-          toast.success("Payment successful", {
+          if (res.data.result.status == "SUCCESS") {
+            toast.success("Payment successful", {
             autoClose: 3000,
             position: toast.POSITION.TOP_LEFT,
           });
+          }
+          else {
+            toast.error("Payment Failed", {
+            autoClose: 2000,
+            position: toast.POSITION.TOP_LEFT,
+          });
+          }
         })
         .catch((e) => {
           toast.error(e.message, {
